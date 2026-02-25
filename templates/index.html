@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Список студентов</h2>
+    
+    {% if students %}
+        {% for student in students %}
+            <div class="student">
+                <strong>{{ student[1] }}</strong> - {{ student[2] }}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Пока нет студентов. <a href="/add">Добавьте первого!</a></p>
+    {% endif %}
+{% endblock %}

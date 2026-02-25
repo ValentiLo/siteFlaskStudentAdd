@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Добавить нового студента</h2>
+    
+    <form action="/add" method="POST">
+        <p>
+            <input type="text" name="name" placeholder="Имя студента" required style="padding: 8px; width: 200px;">
+        </p>
+        <p>
+            <input type="text" name="city" placeholder="Город" required style="padding: 8px; width: 200px;">
+        </p>
+        <button type="submit" style="padding: 8px 15px;">Добавить</button>
+    </form>
+    
+    <p><a href="/">← Назад к списку</a></p>
+{% endblock %}
